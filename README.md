@@ -11,7 +11,7 @@ It does not use the standard 4 param ease signature. Instead it uses a single pa
 Add the dependency to your build.gradle.
 ```
 dependencies {
-    compile 'com.daasuu:EasingInterpolator:1.0.0'
+    compile 'com.daasuu:EasingInterpolator:1.1.0'
 }
 ```
 # Usage
