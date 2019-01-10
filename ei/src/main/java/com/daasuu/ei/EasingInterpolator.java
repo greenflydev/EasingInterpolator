@@ -1,7 +1,7 @@
 package com.daasuu.ei;
 
 import android.animation.TimeInterpolator;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 /**
  * The Easing class provides a collection of ease functions. It does not use the standard 4 param
