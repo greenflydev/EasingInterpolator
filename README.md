@@ -11,7 +11,7 @@ It does not use the standard 4 param ease signature. Instead it uses a single pa
 Add the dependency to your build.gradle.
 ```
 dependencies {
-    compile 'com.daasuu:EasingInterpolator:1.1.0'
+    compile 'com.daasuu:EasingInterpolator:1.2.0'
 }
 ```
 # Usage
@@ -28,6 +28,7 @@ dependencies {
 ```
 # Easing Graphs
 <img src="art/easing.png" width="100%">
+<img src="art/expo.png" width="60%">
 <img src="art/FPSAnimator1.gif" width="70%">
 
 # ProGuard
