@@ -7,8 +7,6 @@ import android.graphics.Paint;
 import android.graphics.PointF;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
-import android.util.Log;
-import android.view.animation.OvershootInterpolator;
 import android.widget.FrameLayout;
 
 import com.daasuu.ei.Ease;
@@ -79,8 +77,12 @@ public class EasingGraphView extends FrameLayout {
             easingInterpolator = new EasingInterpolator(Ease.ELASTIC_IN_OUT);
         }
 
-        int x = (int) mTextPaint.measureText(easingInterpolator.getEase().name());
-        canvas.drawText(easingInterpolator.getEase().name(), (loopSize * dpSize - x) / 2, mAdjustTextMesureY, mTextPaint);
+        int xWidth = (int) mTextPaint.measureText(easingInterpolator.getEase().name());
+        float x = (loopSize * dpSize - xWidth) / 2f;
+        if (x < 0) {
+            x = 0;
+        }
+        canvas.drawText(easingInterpolator.getEase().name(), x, mAdjustTextMesureY, mTextPaint);
 
 
         PointF points[] = new PointF[loopSize];

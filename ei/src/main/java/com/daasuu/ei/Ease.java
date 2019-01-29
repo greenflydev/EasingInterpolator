@@ -32,5 +32,8 @@ public enum Ease {
     BOUNCE_IN_OUT,
     ELASTIC_IN,
     ELASTIC_OUT,
-    ELASTIC_IN_OUT
+    ELASTIC_IN_OUT,
+    EASE_IN_EXPO,
+    EASE_OUT_EXPO,
+    EASE_IN_OUT_EXPO
 }

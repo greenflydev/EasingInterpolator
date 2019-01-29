@@ -12,7 +12,7 @@ class EasingProvider {
      * @param elapsedTimeRate Elapsed time / Total time
      * @return easedValue
      */
-    public static float get(@NonNull Ease ease, float elapsedTimeRate) {
+    static float get(@NonNull Ease ease, float elapsedTimeRate) {
         switch (ease) {
             case LINEAR:
                 return elapsedTimeRate;
@@ -79,6 +79,18 @@ class EasingProvider {
             case ELASTIC_IN_OUT:
                 return getElasticInOut(elapsedTimeRate, 1, 0.45);
 
+            case EASE_IN_EXPO: {
+                return (float) Math.pow(2, 10 * (elapsedTimeRate - 1));
+            }
+            case EASE_OUT_EXPO: {
+                return (float) -Math.pow(2, -10 * elapsedTimeRate) + 1;
+            }
+            case EASE_IN_OUT_EXPO: {
+                if ((elapsedTimeRate *= 2) < 1) {
+                    return (float) Math.pow(2, 10 * (elapsedTimeRate - 1)) * 0.5f;
+                }
+                return (float) (-Math.pow(2, -10 * --elapsedTimeRate) + 2f) * 0.5f;
+            }
             default:
                 return elapsedTimeRate;
 
