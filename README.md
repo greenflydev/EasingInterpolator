@@ -8,12 +8,22 @@ Thirty-one different easing animation interpolators for Android.<br>
 It does not use the standard 4 param ease signature. Instead it uses a single param which indicates the current linear ratio (0 to 1) of the tween. 
 
 # Gradle
-Add the dependency to your build.gradle.
-```
-dependencies {
-    implementation 'com.daasuu:EasingInterpolator:1.3.0'
+Step 1. Add the JitPack repository to your build file
+```groovy
+allprojects {
+	repositories {
+		...
+		maven { url 'https://jitpack.io' }
+	}
 }
 ```
+Step 2. Add the dependency
+```groovy
+    dependencies {
+        implementation 'com.github.MasayukiSuda:EasingInterpolator:v1.3.2'
+    }
+```
+
 # Usage
 ```JAVA
 
